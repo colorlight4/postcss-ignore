@@ -1,0 +1,33 @@
+{
+  "name": "postcss-ignore",
+  "version": "0.0.0",
+  "description": "PostCSS plugin to let specific css lines and rules untouched by other plugins",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "postcss-ignore",
+    "ignore"
+  ],
+  "author": "Felix Kalkuhl <felix@kalkuhl.net>",
+  "license": "MIT",
+  "repository": "colorlight4/postcss-ignore",
+  "bugs": {
+    "url": "https://github.com/colorlight4/postcss-ignore/issues"
+  },
+  "homepage": "https://github.com/colorlight4/postcss-ignore",
+  "dependencies": {
+    "postcss": "^5.0.16"
+  },
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "eslint": "^2.1.0",
+    "eslint-config-postcss": "^2.0.0"
+  },
+  "scripts": {
+    "test": "ava && eslint *.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5"
+  }
+}
