@@ -26,11 +26,11 @@ First things first:
 ```sh
 # 1. clone repo
 # 2. link package global
-$ cd package_folder
+$ cd package-folder
 $ npm link
 # 3. link package local
-$ cd project node_modules folder/
-$ ppm link postcss-ignore
+$ cd project-node_modules-folder/
+$ npm link postcss-ignore
 
 ```
 
