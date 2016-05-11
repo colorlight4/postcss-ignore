@@ -59,4 +59,4 @@ gulp.task('scss', function() {
 
 ```
 
-**Note that** the ignore(‚last‘) call has to be in a other pipe than the initial, because of the asynchron nature of pipes.
+**Note that** the ignore(‚last‘) call has to be in an other pipe than the initial, because of the asynchron nature of pipes.
