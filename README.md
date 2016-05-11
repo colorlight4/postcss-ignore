@@ -1,27 +1,48 @@
-# PostCSS Ignore [![Build Status][ci-img]][ci]
+# PostCSS Ignore
 
 [PostCSS] plugin to let specific css lines and rules untouched by other plugins.
 
 [PostCSS]: https://github.com/postcss/postcss
-[ci-img]:  https://travis-ci.org/colorlight4/postcss-ignore.svg
-[ci]:      https://travis-ci.org/colorlight4/postcss-ignore
 
 ```css
 .foo {
     /* Input example */
+
+    z-index: 1337 !ignore;
 }
 ```
 
 ```css
 .foo {
   /* Output example */
+
+  z-index: 1337;
 }
 ```
 
 ## Usage
 
-```js
-postcss([ require('postcss-ignore') ])
+```gulp
+
+gulp.task('scss', function() {
+    gulp.src('src/css/*.css')
+        .pipe( postcss([ 
+            ignore(), // <- hide flagged declarations
+            
+            // other plugins
+            
+            ])
+        )
+        
+        // maybe some more things
+        
+        .pipe( postcss([ 
+            ignore('last'), // <- **unhide** flagged declarations
+        ]) )
+        .pipe( gulp.dest('dist/css/'))
+        .pipe( reload({stream:true}));
+});
+
 ```
 
-See [PostCSS] docs for examples for your environment.
+**Note that** the ignore(‚last‘) call has to be in a other pipe than the initial, because of the asynchron nature of pipes.

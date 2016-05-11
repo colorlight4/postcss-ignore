@@ -1,7 +1,7 @@
 {
   "name": "postcss-ignore",
-  "version": "0.0.0",
-  "description": "PostCSS plugin to let specific css lines and rules untouched by other plugins",
+  "version": "0.1.0",
+  "description": "PostCSS plugin let specific css lines and rules untouched by other plugins",
   "keywords": [
     "postcss",
     "css",
