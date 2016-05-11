@@ -3,40 +3,42 @@ var postcss = require('postcss');
 module.exports = postcss.plugin('postcss-ignore', function (opts) {
     opts = opts || {};
 
-    // Work with options here
-
 return function (css) {
 
-    // Callback for each rule node.
-    css.walkRules(function (rule) { 
+    var last = false
 
-      // Match the individual rule selector 
-      if ( rule.value.indexOf('!ignore') !== -1 ) { 
+    if (opts == 'last') {
+      last = true
+    }
+
+    if (last == true) {
+
+      css.walkComments(function (rule) { 
+
+          if ( rule.text.indexOf('!ignore') != -1 ) { 
+
+            var foo  = /^(?:\w*\-)*\w+/
+            var value = /[^:]*$/
+            var baa = / !ignore/
+
+            var prop = rule.text.match(foo);
+            var value = rule.text.replace(baa, ';').match(value)
 
 
+            rule.replaceWith({ prop: prop, value: value });
+          }
+        });
 
-// adskopaskdpoaksop
+      } else {
 
-         // Array to contain the rule’s individual selector.
-        var focuses = []; 
-        rule.selectors.forEach(function (selector) { 
+        css.walkDecls(function (rule) { 
 
-           // Passes all declaration values within the match of hover replacing those values with the returned result of focus.
-          if ( selector.indexOf(':hover') !== -1 ) {
-
-            focuses.push(selector.replace(/:hover/g, ':focus')); 
+          if ( rule.value.indexOf('!ignore') != -1 ) { 
+            rule.replaceWith({text: rule});
           }
 
         });
-
-        // Checks if array contain values
-        if ( focuses.length ) { 
-          // Concat the original rules with the new duplicated :focus rules 
-          // Groups of selectors are automatically split with commas.
-          rule.selectors = rule.selectors.concat(focuses);
-        }
       }
-    });
 
     };
 });
