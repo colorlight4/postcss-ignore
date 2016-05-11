@@ -22,7 +22,21 @@
 
 ## Usage
 
-```gulp
+First things first:
+```sh
+# 1. clone repo
+# 2. link package global
+$ cd package_folder
+$ npm link
+# 3. link package local
+$ cd project node_modules folder/
+$ ppm link postcss-ignore
+
+```
+
+
+Gulp:
+```js
 
 gulp.task('scss', function() {
     gulp.src('src/css/*.css')
