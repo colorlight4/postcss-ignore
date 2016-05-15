@@ -1,6 +1,8 @@
 # PostCSS Ignore
 
-[PostCSS] plugin to let specific css lines and rules untouched by other plugins.
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/postcss-ignore/master/LICENSE)
+
+> [PostCSS] plugin to let specific css lines and rules untouched by other plugins.
 
 [PostCSS]: https://github.com/postcss/postcss
 
