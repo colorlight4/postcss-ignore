@@ -41,7 +41,7 @@ Gulp:
 gulp.task('scss', function() {
     gulp.src('src/css/*.css')
         .pipe( postcss([ 
-            ignore(), // <- hide flagged declarations
+            ignore() // <- hide flagged declarations
             
             // other plugins
             
@@ -51,7 +51,7 @@ gulp.task('scss', function() {
         // maybe some more things
         
         .pipe( postcss([ 
-            ignore('last'), // <- **unhide** flagged declarations
+            ignore('last') // <- **unhide** flagged declarations
         ]) )
         .pipe( gulp.dest('dist/css/'))
         .pipe( reload({stream:true}));
@@ -59,4 +59,4 @@ gulp.task('scss', function() {
 
 ```
 
-**Note that** the ignore(‚last‘) call has to be in an other pipe than the initial, because of the asynchron nature of pipes.
+**Note that** the `ignore('last')` call has to be in an other pipe than the initial.
