@@ -1,6 +1,8 @@
 # PostCSS Ignore
 
-[PostCSS] plugin to let specific css lines and rules untouched by other plugins.
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/colorlight4/postcss-ignore/master/LICENSE)
+
+> [PostCSS] plugin to let specific css lines and rules untouched by other plugins.
 
 [PostCSS]: https://github.com/postcss/postcss
 
@@ -59,4 +61,4 @@ gulp.task('scss', function() {
 
 ```
 
-**Note that** the ignore(‚last‘) call has to be in an other pipe than the initial, because of the asynchron nature of pipes.
+**Note that** the `ignore('last')` call has to be in an other pipe than the initial.
