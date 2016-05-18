@@ -4,7 +4,7 @@
 
 > [PostCSS] plugin to let specific css lines and rules untouched by other plugins.
 
-**DISCLAIMER:** Only tested with Gulp workflows & `!ignore` flag breaks css if not removed - usage on own risk so far.
+**DISCLAIMER:** Only tested with Gulp workflows & `!ignore` flag breaks css if not removed (by this plugin) - usage on own risk so far.
 
 [PostCSS]: https://github.com/postcss/postcss
 
