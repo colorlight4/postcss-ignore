@@ -5,7 +5,10 @@
 > [PostCSS] plugin to let specific css lines and rules untouched by other plugins.
 
 **DISCLAIMER:** Only tested with Gulp workflows & `!ignore` flag breaks css if not removed (by this plugin) - usage on own risk so far.
+If anyone have some ideas e.g. how it would be possible to flag the decl without breaking it - feel free to constribute or find me on [Twitter] :)
 
+
+[Twitter]: https://twitter.com/colorlight4
 [PostCSS]: https://github.com/postcss/postcss
 
 ```css
