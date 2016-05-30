@@ -31,7 +31,6 @@
 First things first:
 ```sh
 $ npm install postcss-ignore
-
 ```
 
 
