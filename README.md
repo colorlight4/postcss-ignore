@@ -30,13 +30,7 @@
 
 First things first:
 ```sh
-# 1. clone repo
-# 2. link package global
-$ cd package-folder
-$ npm link
-# 3. link package local
-$ cd project-node_modules-folder/
-$ npm link postcss-ignore
+$ npm install postcss-ignore
 
 ```
 
